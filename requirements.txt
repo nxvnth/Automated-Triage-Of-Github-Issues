@@ -1,0 +1,11 @@
+# Data pipeline
+pandas
+pyarrow
+scikit-learn
+dvc
+pyyaml
+
+# EDA notebook
+jupyter
+matplotlib
+seaborn

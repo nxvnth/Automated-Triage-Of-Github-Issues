@@ -1,5 +1,5 @@
-# Data — not committed; see README for how to fetch it
-github-issues-dataset/
+# Data — not committed to git; versioned with DVC (.dvc pointer files ARE committed)
+github-issues-dataset/github_issues_dataset.parquet
 data/
 
 # Python

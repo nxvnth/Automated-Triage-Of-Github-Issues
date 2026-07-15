@@ -1,0 +1,4 @@
+split:
+  seed: 42
+  val_frac: 0.10
+  test_frac: 0.10
