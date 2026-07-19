@@ -1,37 +1,37 @@
 schema: '2.0'
 stages:
   prepare:
-    cmd: python -m src.make_dataset
+    cmd: python -m src.data.make_dataset
     deps:
     - path: github-issues-dataset/github_issues_dataset.parquet
       hash: md5
       md5: 15bdc000bf926e436bcc9a1b1c64ee5a
       size: 138948920
-    - path: src/make_dataset.py
+    - path: src/data/make_dataset.py
       hash: md5
-      md5: bf9ceecf7c7b7f8ffa96ef08331d0dd7
-      size: 3208
-    - path: src/preprocess.py
+      md5: 61a6d1e7c44c1e665d3ae8607561ba34
+      size: 3223
+    - path: src/data/preprocess.py
       hash: md5
       md5: c47ceea3c4e22ad1304455415e5a7189
       size: 5499
-    - path: src/taxonomy.py
+    - path: src/data/taxonomy.py
       hash: md5
       md5: ccf3216a81e7363f650d38060a3779f6
       size: 2012
     outs:
     - path: data/processed/issues_clean.parquet
       hash: md5
-      md5: 28d16a50d2f41fc878953478c74f6fca
-      size: 65789801
+      md5: 9c63c72523159ceb0e019a52075ee572
+      size: 65789841
   split:
-    cmd: python -m src.make_splits
+    cmd: python -m src.data.make_splits
     deps:
     - path: data/processed/issues_clean.parquet
       hash: md5
-      md5: 28d16a50d2f41fc878953478c74f6fca
-      size: 65789801
-    - path: src/make_splits.py
+      md5: 9c63c72523159ceb0e019a52075ee572
+      size: 65789841
+    - path: src/data/make_splits.py
       hash: md5
       md5: a1399edde418e0f342b696b3888a436b
       size: 2019
@@ -44,6 +44,6 @@ stages:
     outs:
     - path: data/splits
       hash: md5
-      md5: 3359dc8af7908561418655c839033a91.dir
-      size: 68290416
+      md5: e4882547b644d8b4f8ca2ceb76657d2d.dir
+      size: 68290536
       nfiles: 3

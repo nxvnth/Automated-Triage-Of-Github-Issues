@@ -1,11 +1,20 @@
+# Pinned: an unpinned `pip install mlflow` once silently downgraded
+# pandas & pyarrow and changed parquet output hashes (content was identical,
+# but the writer metadata differs). Exact versions keep `dvc repro`
+# hash-stable across machines.
+
 # Data pipeline
-pandas
-pyarrow
-scikit-learn
-dvc
-pyyaml
+pandas==2.3.3
+pyarrow==24.0.0
+scikit-learn==1.9.0
+dvc==3.67.1
+PyYAML==6.0.3
+
+# Modeling / experiment tracking
+mlflow==3.14.0
+joblib==1.5.3
 
 # EDA notebook
-jupyter
-matplotlib
-seaborn
+jupyter==1.1.1
+matplotlib==3.11.0
+seaborn==0.13.2

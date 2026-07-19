@@ -7,15 +7,15 @@
       -> filter:   bot-signature issues, exact duplicates
       -> write data/processed/issues_clean.parquet
 
-Run via `dvc repro` (or directly: `python -m src.make_dataset`).
+Run via `dvc repro` (or directly: `python -m src.data.make_dataset`).
 """
 import sys
 from pathlib import Path
 
 import pandas as pd
 
-from src.preprocess import PII_PATTERNS, clean_body, redact
-from src.taxonomy import to_type
+from src.data.preprocess import PII_PATTERNS, clean_body, redact
+from src.data.taxonomy import to_type
 
 RAW_PATH = Path('github-issues-dataset/github_issues_dataset.parquet')
 OUT_PATH = Path('data/processed/issues_clean.parquet')

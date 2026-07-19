@@ -1,18 +1,18 @@
 stages:
   prepare:
-    cmd: python -m src.make_dataset
+    cmd: python -m src.data.make_dataset
     deps:
       - github-issues-dataset/github_issues_dataset.parquet
-      - src/preprocess.py
-      - src/taxonomy.py
-      - src/make_dataset.py
+      - src/data/preprocess.py
+      - src/data/taxonomy.py
+      - src/data/make_dataset.py
     outs:
       - data/processed/issues_clean.parquet
   split:
-    cmd: python -m src.make_splits
+    cmd: python -m src.data.make_splits
     deps:
       - data/processed/issues_clean.parquet
-      - src/make_splits.py
+      - src/data/make_splits.py
     params:
       - split
     outs:

@@ -1,6 +1,6 @@
 # Data — not committed to git; versioned with DVC (.dvc pointer files ARE committed)
 github-issues-dataset/github_issues_dataset.parquet
-data/
+/data/
 
 # Python
 .venv/
@@ -11,7 +11,9 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Experiment tracking (added in Stage 3)
-mlruns/
+/mlruns/
+/mlflow.db
+/models/
 
 # Secrets
 .env
